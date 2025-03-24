@@ -3,33 +3,35 @@
 ##Diagrama UML (Mermaid)
 
 '''
+
 classDiagram
+
   class ReprodutorMusical {
     +tocar()
     +pausar()
-    +selecionarMusica(String musica)
+    +selecionarMusica(musica: String)
   }
 
   class AparelhoTelefonico {
-    +ligar(String numero)
+    +ligar(numero: String)
     +atender()
     +iniciarCorreioVoz()
   }
 
   class NavegadorInternet {
-    +exibirPagina(String url)
+    +exibirPagina(url: String)
     +adicionarNovaAba()
     +atualizarPagina()
   }
 
-  class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
+  class Iphone {
     +tocar()
     +pausar()
-    +selecionarMusica(String musica)
-    +ligar(String numero)
+    +selecionarMusica(musica: String)
+    +ligar(numero: String)
     +atender()
     +iniciarCorreioVoz()
-    +exibirPagina(String url)
+    +exibirPagina(url: String)
     +adicionarNovaAba()
     +atualizarPagina()
   }
@@ -37,5 +39,5 @@ classDiagram
   ReprodutorMusical <|-- Iphone
   AparelhoTelefonico <|-- Iphone
   NavegadorInternet <|-- Iphone
-'''
 
+'''
